@@ -10,6 +10,7 @@
 		<module>java-jvm</module>
 		<module>java-tools</module>
 		<module>java-structure</module>
+		<module>java-design-patterns</module>
 	</modules>
 	<dependencies>
 		<dependency>

@@ -23,18 +23,18 @@ public class TestQueue {
 		
 		List<Integer> vsList = Arrays.asList(30,33,35);
 		
-		List<Person> personList = Lists.newArrayList(person1, person2, person3, person4, person5, person6);
-		FluentIterable<Person> flu = FluentIterable.from(personList).filter(new Predicate<Person>(){
-			@Override
-			public boolean apply(Person input) {
-				return vsList.contains(input.getAge());
-			}
-		});
+//		List<Person> personList = Lists.newArrayList(person1, person2, person3, person4, person5, person6);
+//		FluentIterable<Person> flu = FluentIterable.from(personList).filter(new Predicate<Person>(){
+//			@Override
+//			public boolean apply(Person input) {
+//				return vsList.contains(input.getAge());
+//			}
+//		});
 		
-		for(Iterator<Person> iter=flu.iterator();iter.hasNext();){
-			Person p = (Person)iter.next();
-			System.out.println(p.getFirstName()+", "+p.getAge());
-		}
+//		for(Iterator<Person> iter=flu.iterator();iter.hasNext();){
+//			Person p = (Person)iter.next();
+//			System.out.println(p.getFirstName()+", "+p.getAge());
+//		}
 		
 	}
 	

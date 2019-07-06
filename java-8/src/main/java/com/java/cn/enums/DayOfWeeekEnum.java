@@ -1,8 +1,6 @@
 package com.java.cn.enums;
 
-import lombok.Getter;
-
-@Getter
+//@Getter
 public enum DayOfWeeekEnum {
 	MONDAY("周一", 1), TUESDAY("周二", 2), WEDNESDAY("周三", 3), THURSDAY("周四", 4), FRIDAY("周五", 5), SATURDAY("周六",
 			6), SUNDAY("周日", 7);
