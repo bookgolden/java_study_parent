@@ -30,11 +30,11 @@ public class StreamTest1 {
 		//4、创建无限流
 		//迭代
 		Stream<Integer> stream4 = Stream.iterate(0, x -> x+2);
-		stream4.forEach(System.out::println);
-		stream4.limit(10).forEach(System.out::println);
+//		stream4.forEach(System.out::println);
+//		stream4.limit(10).forEach(System.out::println);
 		
 		//生成
-		Stream.generate(() -> Math.random()).forEach(x -> System.out.println(x));
-//		Stream.generate(() -> Math.random()).limit(5).forEach(System.out::println);
+//		Stream.generate(() -> Math.random()).forEach(x -> System.out.println(x));
+		Stream.generate(() -> Math.random()).limit(5).forEach(System.out::println);
 	}
 }

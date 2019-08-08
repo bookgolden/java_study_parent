@@ -11,6 +11,13 @@ import java.util.function.Supplier;
 
 import com.java.cn.bean.Employee;
 
+/**
+ * java8内置的四大核心函数式接口
+ * Consumer<T> ：消费型接口			void accept(T t)
+ * Supplier<T> : 供给型接口			T get();
+ * Functioon<T, R> : 函数型接口		R apply(T t);
+ * Predicate<T> : 断言型接口		boolean test(T t)
+ */
 public class LambdaTest3 {
 	static List<Employee> employee = Arrays.asList(
 			new Employee("张三", 18, 9999.99),
@@ -25,26 +32,11 @@ public class LambdaTest3 {
 		employee.stream().forEach(System.out::println);
 	}
 	
-	/**
-	 * java8内置的四大核心函数式接口
-	 * 
-	 * Consumer<T> ：消费型接口
-	 * 		void accept(T t)
-	 * 
-	 * Supplier<T> : 供给型接口
-	 * 		T get();
-	 * 
-	 * Functioon<T, R> : 函数型接口
-	 * 		R apply(T t);
-	 * 
-	 * Predicate<T> : 断言型接口
-	 * 		boolean test(T t)
-	 */
 	//Consumer<T> ：消费型接口
 	public static void consumerTest(){
-//		consumerHaddler(10000, m -> System.out.println("下馆子吃饭花了 "+ m +"元"));
-		consumerHaddler2(1000, () -> {
-			System.out.println(10.123);
+//		consumerHaddler(10000, m -> System.out.println("下馆子吃饭花了 " + m + "元"));
+		supplierHaddler2(1000, () -> {
+//			System.out.println(10.123);
 			return 10.12;
 		});
 	}
@@ -53,8 +45,9 @@ public class LambdaTest3 {
 		con.accept(money);
 	}
 	
-	public static void consumerHaddler2(double money, Supplier<Double> con){
-		con.get();
+	public static void supplierHaddler2(double money, Supplier<Double> con){
+		Double d = (Double)con.get();
+		System.out.println(d);
 	}
 	
 	/**
@@ -79,14 +72,13 @@ public class LambdaTest3 {
 	 * 需求：用于处理字符串
 	 */
 	public static void functionTest(){
-		String vs = strHanddler("hello world..", (str) -> str.trim().toUpperCase());
+		String vs = functionHanddler("hello world..", (str) -> str.trim().toUpperCase());
 		System.out.println(vs);
 	}
 	
-	public static String strHanddler(String str, Function<String, String> fun){
+	public static String functionHanddler(String str, Function<String, String> fun){
 		return fun.apply(str);
 	}
-	
 	
 	/**
 	 * Predicate<T> : 断言型接口
@@ -106,6 +98,15 @@ public class LambdaTest3 {
 			}
 		}
 		return strList;
+	}
+	
+	public static void main(String[] args) {
+//		test1();
+//		consumerTest();
+//		supplierTest();
+//		functionTest();
+		predicateTest();
+//		consumerTest();
 	}
 	
 	/**
@@ -132,12 +133,5 @@ public class LambdaTest3 {
 	 * 格式： Type[]::new
 	 * 
 	 */
-	public static void main(String[] args) {
-//		consumerTest();
-//		supplierTest();
-//		functionTest();
-//		predicateTest();
-//		consumerTest();
-	}
 	
 }

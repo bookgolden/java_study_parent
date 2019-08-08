@@ -2,14 +2,10 @@ package com.java.cn;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.function.Predicate;
 
 import com.java.cn.bean.Person;
-
-
 
 public class TestQueue {
 
@@ -37,7 +33,6 @@ public class TestQueue {
 //		}
 		
 	}
-	
 	
 	public void t(){
 		List lt = new ArrayList();

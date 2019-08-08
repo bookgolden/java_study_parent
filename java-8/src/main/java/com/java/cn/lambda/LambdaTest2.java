@@ -46,8 +46,8 @@ public class LambdaTest2 {
 	}
 	
 	public static void main(String[] args) {
-		LambdaGrammer();
-//		test1();
+//		LambdaGrammer();
+		test1();
 //		test2();
 //		test3();
 	}

@@ -11,6 +11,7 @@
 		<module>java-tools</module>
 		<module>java-structure</module>
 		<module>java-design-patterns</module>
+		<module>java-thinking</module>
 	</modules>
 	<dependencies>
 		<dependency>

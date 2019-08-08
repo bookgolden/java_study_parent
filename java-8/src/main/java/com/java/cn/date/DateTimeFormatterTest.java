@@ -8,12 +8,12 @@ import java.time.format.DateTimeFormatter;
 
 
 public class DateTimeFormatterTest {
-//	private static final Logger logger = LoggerFactory.getLogger(DateTimeFormatterTest.class);
 	
 	public static void main(String[] args) {
-//		LocalDateTime localDateTime = LocalDateTime.now();
-//		localDateTime = localDateTime.plusMonths(1);
-//		System.out.println(localDateTime);
+		LocalDateTime localDateTime = LocalDateTime.now();
+		System.out.println(localDateTime);
+		localDateTime = localDateTime.plusMonths(1);
+		System.out.println(localDateTime);
 		
 //		String vs = DayOfWeeekEnum.getEnumByValue(localDateTime.getDayOfWeek().getValue()).getAlias();
 //		System.out.println(today+"("+vs+")");
@@ -111,7 +111,7 @@ public class DateTimeFormatterTest {
 //		ZonedDateTime zdt = ldtd2.atZone(ZoneId.of("Asia/Shanghai"));
 //		System.out.println(zdt);
 		
-		LocalDate local = LocalDate.now();
-		System.out.println(local.plusDays(1).toString());
+//		LocalDate local = LocalDate.now();
+//		System.out.println(local.plusDays(1).toString());
 	}
 }

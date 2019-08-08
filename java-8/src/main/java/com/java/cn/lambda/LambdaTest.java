@@ -26,7 +26,7 @@ public class LambdaTest {
 		System.out.println(vs);
 //		test2();
 //		test3();
-//		test4();
+		test4();
 //		test5();
 	}
 	
@@ -87,8 +87,8 @@ public class LambdaTest {
 
 	//优化方式三: Lambda表达式
 	public static void test4() {
-		List<Employee> list = filterEmployee(employee, (e)->e.getAge()<20);
-		for(Employee e : list){
+		List<Employee> list = filterEmployee(employee, (e) -> e.getAge() < 20);
+		for (Employee e : list) {
 			System.out.println(e);
 		}
 	}
@@ -96,7 +96,7 @@ public class LambdaTest {
 	//优化方式四:
 	public static void test5() {
 		employee.stream()
-				.filter((e) -> e.getSalary() >= 7777.9)
+				.filter((e) -> e.getSalary() >= 7777.77)
 				.limit(2)
 				.forEach(System.out::println);
 	}

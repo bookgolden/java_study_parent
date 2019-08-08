@@ -3,6 +3,7 @@ package com.java.cn.stream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import com.java.cn.bean.Employee;
@@ -13,9 +14,12 @@ public class StreamTest2 {
 			new Employee("李四", 38, 5555.99),
 			new Employee("王五", 50, 6666.66),
 			new Employee("赵六", 16, 3333.33),
+			new Employee("赵六", 16, 3333.33),
 			new Employee("田七", 8, 7777.77),
 			new Employee("田七", 8, 7777.77),
-			new Employee("田七", 8, 7777.77)
+			new Employee("田七", 8, 7777.77),
+			new Employee("哈哈", 2, 177.77),
+			new Employee("男子汉", 1, 277.77)
 		);
 	
 	//中间操作
@@ -27,33 +31,28 @@ public class StreamTest2 {
 	 * distinct--筛选，通过流所生成元素的hashCode()和equals()去除重复元素
 	 */
 	public static void main(String[] args) {
+		//sorted
+//		employee.stream().sorted((x, y) -> Integer.compare(x.getAge(), y.getAge())).forEach(System.out::println);
 		
-//		employee.stream().sorted((x, y)-> Integer.compare(x.getAge(), y.getAge())).forEach(System.out::println);
-		
-		//employee.stream().filter((x) -> x.getAge() > 35).forEach(System.out::println);
-//		Stream<Employee> stream = employee.stream().filter((x) -> {
-//			System.out.println("中间操作......");
-//			return x.getAge() > 35;
-//		});
-//		stream.forEach(System.out::println);//内部迭代
-//		System.out.println("------------------------------------");
-//		//外部迭代
-//		Iterator<Employee> iter = employee.iterator();
-//		while(iter.hasNext()){
-//			System.out.println(iter.next());
-//		}
-		
+		//filter
+//		employee.stream().filter((x) -> x.getAge() > 35).forEach(System.out::println); //内部迭代
+
 		//limit
-//		employee.stream().filter((x) -> x.getSalary()>5000)
-//						.limit(2)
-//						.forEach(System.out::println);
+//		employee.stream().limit(2).forEach(System.out::println);
 		
 		//skip
 //		employee.stream().skip(2).forEach(System.out::println);
-//		employee.stream().skip(2).limit(1).forEach(System.out::println);
 		
 		//distinct
-//		employee.stream().skip(2).distinct().forEach(System.out::println);
+//		employee.stream().distinct().forEach(System.out::println);
+		
+		//综合
+//		employee.stream().sorted((x, y) -> Integer.compare(x.getAge(), y.getAge()))
+//						.filter((w) -> w.getAge() > 2)
+//						.skip(2)
+//						.limit(10)
+//						.distinct()
+//						.forEach(System.out::println);
 		
 		//========================================================================================
 		
@@ -63,43 +62,32 @@ public class StreamTest2 {
 		 * flatMap--接收一个函数作为参数，将流中的每个值都换成另一个流，然后把所有流连接成一个流
 		 */
 		
-//		List<String> list = Arrays.asList("aaa","bbb","ccc","ddd","eee");
+//		employee.stream().map(Employee::getName).forEach(System.out::println);
+		
+		List<String> list = Arrays.asList("eee","bbb","ccc","ddd","aaa");
+		
 //		list.stream().map((str)->str.toUpperCase())
 //		.forEach(System.out::println);
 		
-//		employee.stream()
-//				.map(Employee::getName)
-//				.forEach(System.out::println);
+
 		
-//		Arrays.asList("aaa","bbb","ccc","ddd","eee").stream()
-//													.map((s)->filterCharacter(s))
-//													.forEach(sm -> {
-//														sm.forEach(System.out::print);
-//													});
+//		list.stream().map((s)->filterCharacter(s))
+//						.forEach(sm -> {
+//							sm.forEach(System.out::print);
+//						});
 		
-//		String str = Arrays.asList("aaa","bbb","ccc","ddd","eee").stream()
-//													.collect(Collectors.joining(",", "=====", "==="));
-//		System.out.println(str);
-		
-//		Arrays.asList("aaa","bbb","ccc","ddd","eee").stream()
-//													.map(x->filterCharacter(x))
-//													.forEach(System.out::print);
+//		list.stream().map(x->filterCharacter(x)).forEach(System.out::print);
 		
 		//flatMap
-//		Arrays.asList("aaa","bbb","ccc","ddd","eee").stream()
-//													.flatMap(x -> filterCharacter(x))
-//													.forEach(System.out::print);
+		list.stream().flatMap(x -> filterCharacter(x)).forEach(System.out::print);
+		System.out.println();
+		Stream<Character> stream = list.stream().flatMap(x -> filterCharacter(x));
+		String str = stream.map(x -> x.toString()).collect(Collectors.joining(",", "===head===", "===tail==="));
+		System.out.println(str);
 		
-//		//sorted
-//		Arrays.asList("bbb","aaa","ddd","ccc","eee").stream()
-//													.flatMap(x->filterCharacter(x))
-//													.sorted().forEach(System.out::print);
+		//sorted
+		list.stream().flatMap(x->filterCharacter(x)).sorted().forEach(System.out::print);
 		
-		employee.stream()
-				.sorted((x, y)-> {
-//					return x.getAge()>y.getAge();
-					return x.getName().compareTo(y.getName());
-				}).forEach(System.out::println);
 	}
 	
 	public static Stream<Character> filterCharacter(String str){
