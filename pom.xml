@@ -12,7 +12,7 @@
 		<module>java-structure</module>
 		<module>java-design-patterns</module>
 		<module>java-thinking</module>
-	</modules>
+    </modules>
 	<dependencies>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -30,4 +30,24 @@
 
 		</dependencies>
 	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<!-- java编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>11</source>
+					<target>11</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
