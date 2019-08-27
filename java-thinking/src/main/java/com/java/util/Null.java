@@ -1,3 +1,2 @@
-//: net/mindview/util/Null.java
-package net.mindview.util;
+package com.java.util;
 public interface Null {} ///:~

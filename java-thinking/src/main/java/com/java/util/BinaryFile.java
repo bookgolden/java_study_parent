@@ -1,6 +1,6 @@
 //: net/mindview/util/BinaryFile.java
 // Utility for reading files in binary form.
-package net.mindview.util;
+package com.java.util;
 import java.io.*;
 
 public class BinaryFile {

@@ -1,5 +1,5 @@
 //: net/mindview/util/ConvertTo.java
-package net.mindview.util;
+package com.java.util;
 
 public class ConvertTo {
   public static boolean[] primitive(Boolean[] in) {

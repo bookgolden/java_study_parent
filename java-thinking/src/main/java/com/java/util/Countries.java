@@ -1,8 +1,22 @@
 //: net/mindview/util/Countries.java
 // "Flyweight" Maps and Lists of sample data.
-package net.mindview.util;
-import java.util.*;
-import static net.mindview.util.Print.*;
+package com.java.util;
+
+import java.util.AbstractMap;
+import java.util.AbstractSet;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class Countries {
   public static final String[][] DATA = {
@@ -213,18 +227,18 @@ public class Countries {
     return new ArrayList<String>(select(size).keySet());
   }
   public static void main(String[] args) {
-    print(capitals(10));
-    print(names(10));
-    print(new HashMap<String,String>(capitals(3)));
-    print(new LinkedHashMap<String,String>(capitals(3)));
-    print(new TreeMap<String,String>(capitals(3)));
-    print(new Hashtable<String,String>(capitals(3)));
-    print(new HashSet<String>(names(6)));
-    print(new LinkedHashSet<String>(names(6)));
-    print(new TreeSet<String>(names(6)));
-    print(new ArrayList<String>(names(6)));
-    print(new LinkedList<String>(names(6)));
-    print(capitals().get("BRAZIL"));
+    System.out.println(capitals(10));
+    System.out.println(names(10));
+    System.out.println(new HashMap<String,String>(capitals(3)));
+    System.out.println(new LinkedHashMap<String,String>(capitals(3)));
+    System.out.println(new TreeMap<String,String>(capitals(3)));
+    System.out.println(new Hashtable<String,String>(capitals(3)));
+    System.out.println(new HashSet<String>(names(6)));
+    System.out.println(new LinkedHashSet<String>(names(6)));
+    System.out.println(new TreeSet<String>(names(6)));
+    System.out.println(new ArrayList<String>(names(6)));
+    System.out.println(new LinkedList<String>(names(6)));
+    System.out.println(capitals().get("BRAZIL"));
   }
 } /* Output:
 {ALGERIA=Algiers, ANGOLA=Luanda, BENIN=Porto-Novo, BOTSWANA=Gaberone, BULGARIA=Sofia, BURKINA FASO=Ouagadougou, BURUNDI=Bujumbura, CAMEROON=Yaounde, CAPE VERDE=Praia, CENTRAL AFRICAN REPUBLIC=Bangui}
