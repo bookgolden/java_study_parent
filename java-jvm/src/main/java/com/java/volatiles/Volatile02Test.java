@@ -1,22 +1,5 @@
 package com.java.volatiles;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
-class MyData{
-	
-     int number = 0;
-    public void addTo60(){
-        this.number = 60;
-    }
-    public void addPlusPlus(){
-        number++;
-    }
-
-    AtomicInteger atomicInteger = new AtomicInteger();
-    public void addMyAtommic(){
-        atomicInteger.getAndIncrement();
-    }
-}
 /*
 1 验证volatile的可见性
     1.1 加入int number=0，number变量之前根本没有添加volatile关键字修饰,没有可见性
@@ -29,7 +12,7 @@ class MyData{
         *加sync
         *使用我们的JUC下AtomicInteger
 **/
-public class VolatileDemo {
+public class Volatile02Test {
     public static void main(String[] args){
         MyData myData = new MyData();
         for (int i = 1; i <= 20 ; i++) {

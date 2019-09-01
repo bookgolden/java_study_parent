@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /*
  * 阻塞队列SynchronousQueue演示
  * */
-public class SynchronousQueueDemo {
+public class SynchronousQueueDemo01 {
     public static void main(String[] args) {
         BlockingQueue<String> blockingQueue = new SynchronousQueue<>();
 
@@ -27,21 +27,21 @@ public class SynchronousQueueDemo {
         new Thread(() -> {
             try {
                 try {
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 System.out.println(Thread.currentThread().getName() + "\t take " + blockingQueue.take());
 
                 try {
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 System.out.println(Thread.currentThread().getName() + "\t take " + blockingQueue.take());
 
                 try {
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -1,23 +1,45 @@
 package com.java.cas;
 
-import java.util.*;
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.concurrent.atomic.AtomicStampedReference;
 
 /*
 * 集合类不安全问题:原因是为了保证并发性，add操作没有加锁
 * ArrayList
 * */
 public class ContainerNotSafeDemo {
+	
+	volatile static AtomicInteger atomicInteger = new AtomicInteger(0);
+	static AtomicReference<Integer> atomicReference = new AtomicReference<Integer>(0);
+	static AtomicStampedReference<Integer> atomicStamped = new AtomicStampedReference<Integer>(0, 0);
+	
+	volatile static List<String> list = new CopyOnWriteArrayList<>();
+	  
     public static void main(String[] args){
+    	
+    	
 //        List<String> list = new ArrayList<>();
 //        List<String> list = Collections.synchronizedList(new ArrayList<>());
-        List<String> list = new CopyOnWriteArrayList<>();
-        for(int i=1;i<=3;i++){
+      
+        for(int i=1;i<=13;i++){
             new Thread(()->{
-                list.add(UUID.randomUUID().toString().substring(0,8));
-                System.out.println(list);
+//                list.add(UUID.randomUUID().toString().substring(0,8));
+//            	atomicInteger.compareAndSet(atomicInteger.get(), atomicInteger.getAndDecrement());
+//            	int val = atomicStamped.getReference();
+//            	boolean flag = atomicStamped.compareAndSet(atomicStamped.getReference(), atomicStamped.getReference()+1, atomicStamped.getStamp(), atomicStamped.getStamp()+1);
+            	while(!atomicStamped.compareAndSet(atomicStamped.getReference(), atomicStamped.getReference()+1, atomicStamped.getStamp(), atomicStamped.getStamp()+1)) {
+            		list.add(atomicStamped.getReference()+"");
+            	}
+        		
+//            	list.add(atomicStamped.getReference()+"， "+flag);
+//            	list.add(atomicInteger.get()+"");
+                System.out.println("KKKK = "+" "+list);
             },String.valueOf(i)).start();
         }
+        System.out.println(atomicStamped.getReference());
 //        java.util.ConcurrentModificationException
         /*
         * 1 故障现象

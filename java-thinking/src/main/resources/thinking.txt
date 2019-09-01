@@ -1,0 +1,197 @@
+C# 
+web
+dreamweaver
+ps
+网络技术
+
+生死狙击
+狙击手遗产
+兵临城下
+达摩密宗雪里飘
+
+
+http://developer.51cto.com/art/201512/503095.htm
+男人不泡妞，心里酸溜溜
+女人没人泡，心里很烦燥
+有妞不泡，大逆不道
+有妞乱泡，替天行道
+左眼一闭，对你有意
+右眼一闭，表示同意
+两眼一闭，爱咋滴咋滴
+
+多线程：
+14.第21章并发_基本线程机制(一)
+	LiftOff.java
+	MainThread.java					main主线程去执行
+	BasicThreads.java				通过Thread去执行
+	MoreBasicThreads.java			多个线程去执行
+	CachedThreadPool.java			通过执行器代替Thread，带缓冲的根据需要创建线程池
+	FixedThreadPool.java			创建固定数据的线程池
+	SingleThreadExecutor.java		创建单个线程执行器,一个任务执行完了再执行下一个任务，是有顺序的
+	
+15.第21章并发_基本线程机制(二)
+	TaskWithResult.java				返回结果的线程
+	SleepingTask.java				睡眠
+	SimplePriorities.java			优先级
+
+16.第21章并发_基本线程机制(三)		后台线程
+	SimpleDaemons.java
+	DaemonThreadFactory.java		后台线程工厂
+	DaemonFromFactory.java			测试后台线程工厂类
+	DaemonThreadPoolExecutor.java	后台线程执行器
+	Daemons.java
+	DaemonsDontRunFinally.java		主线程结束后，try/catch/finally的后台进程中的catch/finally中的程序也不执行
+
+17.第21章并发_基本线程机制(四)		基本的线程机制—编码的变体
+	SimpleThread.java				自管理线程类(不推荐)
+	ThreadVariations.java			线程变体
+	Joining.java 
+	ResponsiveUI.java				响应界面
+	
+19.第21章并发_基本线程机制(六)		捕获异常（线程逃逸的异常）
+	ExceptionThread.java			通过线程执行器运行一个异常
+	NaiveExceptionHandling.java		通过try/catch处理ExceptionThread.java中的情况,发现依然捕获不了
+	CaptureUncaughtException.java	处理线程逃逸的异常
+	SettingDefaultHandler.java		线程设置默认的未捕获处异常理器(全局的)
+
+20.第21章并发_共享受限资源(一)		不正确的访问资源/解决共享资源竞争
+	IntGenerator.java
+	EvenGenerator.java
+	EvenChecker.java
+	SynchronizedEvenGenerator.java	通过synchronized解决
+	MutexEvenGenerator.java			通过lock锁定代码断	,lock用法灵活，可以在finally中做善后工作
+	AttemptLocking.java				尝试锁定类
+
+21.第21章并发_共享受限资源(二)		原子性与易变性
+	AtomicityTest.java
+	SerialNumberGenerator.java
+	SerialNumberChecker.java
+	
+22.第21章并发_共享受限资源(三)
+	AtomicIntegerTest.java
+	CriticalSection.java
+	ExplicitCriticalSection.java
+	
+23.第21章并发_共享受限资源(四)		在其他对象上同步，线程本地存储
+	SyncObject.java
+	ThreadLocalVariableHolder.java
+	
+24.第21章并发_终结任务
+	OrnamentalGarden.java
+	Interrupting.java		中断
+	CloseResource.java
+	NIOInterruption.java	NIO中断
+	MultiLock.java			互斥锁		在同一个线程中
+	Blocked2.java
+	InterruptingIdiom.java
+	
+25.第21章并发_线程之间的协作(一)
+	WaxOMatic.java
+	NotifyVsNotifyAll.java
+	
+26.第21章并发_线程之间的协作(二)
+	Restaurant.java
+	WaxOMatic2.java
+	
+27.第21章并发_线程之间的协作(三)
+	LiftOff.java
+	TestBlockingQueues.java			阻塞队列
+	ToastOMatic.java
+	PipedIO.java
+	
+28.第21章并发_死锁
+	Chopstick.java
+	Philosopher.java
+	DeadlockingDiningPhilosophers.java
+	
+29.第21章并发_新类库中的构件(一)
+	CountDownLatch 倒计时锁存器
+	CyclicBarrier  循环阻碍
+	CountDownLatchDemo.java
+	HorseRace.java
+	
+30.第21章并发_新类库中的构件(二)
+	DelayQueue	延迟队列		http://www.cnblogs.com/sunzhenchao/p/3515085.html
+	PriorityBlockingQueue	优先队列
+	
+	
+31.第21章并发_新类库中的构件(三)
+	ScheduledThreadPoolExceutor 预定线程池执行器
+	Semaphore	信号类
+	Exchanger	交换器
+	
+	
+	
+	
+	http://zhs.lxxlxx.com/video/Asian-Amateur-College-Student-Sexual-Intercourse.html
+	
+	
+	工商信用卡还款
+
+
+http://pan.baidu.com/s/1gfyyFSZ  密码：j2pv
+
+山东省潍坊市峡山区东惺惺村村民
+
+
+双天至尊
+战略大作战
+沉默的军队
+幽灵行动之阿尔法
+我们曾经是战士
+
+天蚕变
+断剑
+肖申克的救赎
+鬣狗之路（阿富汉）
+交战规则
+绝地战警2
+绝命追踪
+
+万马奔腾 二胡
+
+
+Multi_001
+	MyThread.java
+	MultiThread.java	static synchronized 是类级别的锁
+	DirtyRead.java
+	SyncDubbo1.java
+	SyncDubbo2.java
+	SyncException.java
+	ObjectLock.java
+	ChangeLock.java
+	ModifyLock.java
+	RunThread.java
+	VolatileNoAtomic.java
+	AtomicUse.java
+	
+	ListAdd1.java	线程间共享
+	ListAdd2.java
+	
+	
+Multi_004
+	Future	com.bjsxt.height.design014
+	Main.java
+	
+	Multi_004
+	Master	com.bjsxt.height.design015
+	
+	
+http://blog.csdn.net/kazeik/article/details/8545049
+http://blog.csdn.net/huang_xw/article/details/7090162
+http://blog.csdn.net/andycpp/article/details/8854593
+http://blog.csdn.net/i_lovefish/article/details/26145139
+http://blog.csdn.net/forever_crying/article/details/8071014
+http://blog.sina.com.cn/s/blog_46d0362d0102vdxl.html
+http://blog.csdn.net/eric_sunah/article/details/7765037
+http://blog.csdn.net/gongzi2311/article/details/40397939
+http://www.cnblogs.com/sunzhenchao/p/3515085.html
+http://www.cnblogs.com/jobs/archive/2007/04/27/730255.html
+http://www.cnblogs.com/jobs/archive/2007/04/27/730255.html
+
+
+http://zhs.lxxlxx.com/video/Asian-Amateur-College-Student-Sexual-Intercourse.html
+
+
+资本的扩张就像一只猛虎，既有创造财富的巨大力量，又有天生的野性，无论资本的游戏多么光怪陆离, 没有实体财富的支持，终究会有崩溃的一天
+
