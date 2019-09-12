@@ -1,8 +1,5 @@
 package com.java.enums;
 
-// Enums in switch statements.
-// Define an enum type:
-
 enum Signal {
 	GREEN, YELLOW, RED,
 }
@@ -12,8 +9,6 @@ public class TrafficLight {
 
 	public void change() {
 		switch (color) {
-		// Note that you don't have to say Signal.RED
-		// in the case statement:
 		case RED:
 			color = Signal.GREEN;
 			break;
@@ -38,13 +33,3 @@ public class TrafficLight {
 		}
 	}
 }
-
-/* Output:
-The traffic light is RED
-The traffic light is GREEN
-The traffic light is YELLOW
-The traffic light is RED
-The traffic light is GREEN
-The traffic light is YELLOW
-The traffic light is RED
-*///:~

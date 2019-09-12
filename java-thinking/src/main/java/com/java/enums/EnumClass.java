@@ -23,7 +23,7 @@ public class EnumClass {
 		
 		for (String s : "HANGING CRAWLING GROUND".split(" ")) {
 			Shrubbery shrub = Enum.valueOf(Shrubbery.class, s);
-			System.out.println(shrub);
+			System.out.println(shrub.name());
 		}
 	}
 }

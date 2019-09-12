@@ -25,9 +25,10 @@ public class EnumMaps {
 			}
 		});
 		for (Map.Entry<AlarmPoints, Command> e : em.entrySet()) {
-			System.out.println(e.getKey() + ": ");
+			System.out.print(e.getKey() + ": ");
 			e.getValue().action();
 		}
+		em.get(BATHROOM).action();
 		try { // If there's no value for a particular key:
 			em.get(UTILITY).action();
 		} catch (Exception e) {
@@ -35,9 +36,3 @@ public class EnumMaps {
 		}
 	}
 }
-
-/* Output:
-BATHROOM: Bathroom alert!
-KITCHEN: Kitchen fire!
-java.lang.NullPointerException
-*///:~

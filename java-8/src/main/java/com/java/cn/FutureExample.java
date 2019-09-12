@@ -1,5 +1,6 @@
 package com.java.cn;
 
+import java.text.DateFormat;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -7,17 +8,24 @@ import java.util.concurrent.Future;
 
 public class FutureExample {
 
+	private static final ThreadLocal<DateFormat> DATE_FORMATTER = new ThreadLocal<DateFormat>(){
+		@Override
+		protected DateFormat initialValue() {
+			return super.initialValue();
+		}
+	};
+
+
 	public static void main(String[] args) throws Exception {
+
 		ExecutorService executor = Executors.newCachedThreadPool();
 		Runnable task1 = new Runnable() {
-			@Override
 			public void run() {
 				// do something
 				System.out.println("i am task1.....");
 			}
 		};
 		Callable<Integer> task2 = new Callable<Integer>() {
-			@Override
 			public Integer call() throws Exception {
 				// do something
 				return new Integer(100);

@@ -14,12 +14,3 @@ public enum SpaceShip {
 		}
 	}
 }
-
-/* Output:
-Scout
-Cargo
-Transport
-Cruiser
-Battleship
-Mothership
-*///:~

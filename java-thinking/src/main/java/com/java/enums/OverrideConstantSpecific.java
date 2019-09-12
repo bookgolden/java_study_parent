@@ -17,9 +17,3 @@ public enum OverrideConstantSpecific {
 		}
 	}
 }
-
-/* Output:
-NUT: default behavior
-BOLT: default behavior
-WASHER: Overridden method
-*///:~

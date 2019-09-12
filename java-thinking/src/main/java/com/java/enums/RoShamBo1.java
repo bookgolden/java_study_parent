@@ -81,7 +81,7 @@ class Rock implements Item {
 }
 
 public class RoShamBo1 {
-	static final int SIZE = 20;
+	static final int SIZE = 10;
 	private static Random rand = new Random(47);
 
 	public static Item newItem() {
@@ -105,26 +105,3 @@ public class RoShamBo1 {
 			match(newItem(), newItem());
 	}
 }
-
-/* Output:	
-Rock vs. Rock: DRAW
-Paper vs. Rock: WIN
-Paper vs. Rock: WIN
-Paper vs. Rock: WIN
-Scissors vs. Paper: WIN
-Scissors vs. Scissors: DRAW
-Scissors vs. Paper: WIN
-Rock vs. Paper: LOSE
-Paper vs. Paper: DRAW
-Rock vs. Paper: LOSE
-Paper vs. Scissors: LOSE
-Paper vs. Scissors: LOSE
-Rock vs. Scissors: WIN
-Rock vs. Paper: LOSE
-Paper vs. Rock: WIN
-Scissors vs. Paper: WIN
-Paper vs. Scissors: LOSE
-Paper vs. Scissors: LOSE
-Paper vs. Scissors: LOSE
-Paper vs. Scissors: LOSE
-*///:~

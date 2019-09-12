@@ -1,10 +1,6 @@
 package com.java.cn;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -54,4 +50,30 @@ public class Test {
 	public static String strHandler(String str, Function<String, String> fun) {
 		return fun.apply(str);
 	}
+
+
+	/**
+	 * 从数据中心获取指定表的各数据信息
+	 * @param tables 表名
+	 * @return
+	 */
+//	public <T, R> List<R> getSourceData(T table) {
+//		return (List<R)new Object();
+//	}
+//
+//	/**
+//	 * @param tables 要获取数据的表名集合
+//	 * @return
+//	 */
+//	public Map<String, List<Object>> getDataFromCenter(String... tables) {
+//
+//		Map<String, List<Object>> map = new HashMap<>();
+//		String[] tableNames = new String[]{"user", "product"};
+//		for (String tableName : tableNames) {
+//			List<Object> list = (List<Object>) getSourceData(tableNames);
+//			map.put(tableName, list);
+//		}
+//		return map;
+//	}
+
 }
