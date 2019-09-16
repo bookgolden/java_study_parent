@@ -3,6 +3,7 @@ package com.java.enums.menu;
 // Subcategorization of enums within interfaces.
 
 public interface Food {
+
 	enum Appetizer implements Food {
 		SALAD, SOUP, SPRING_ROLLS;
 	}

@@ -1,8 +1,10 @@
 package com.java.cn.bean;
 
+import lombok.Data;
+
 import java.math.BigDecimal;
 
-//@Data
+@Data
 public class User {
 	
 	private BigDecimal price;
