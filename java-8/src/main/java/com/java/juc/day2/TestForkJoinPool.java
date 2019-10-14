@@ -60,7 +60,7 @@ public class TestForkJoinPool {
 	public void test3(){
 		List<User> list = new ArrayList<User>();
 //		list.parallelStream().reduce()
-		list.stream().parallel().reduce();
+//		list.stream().parallel().reduce();
 	}
 }
 

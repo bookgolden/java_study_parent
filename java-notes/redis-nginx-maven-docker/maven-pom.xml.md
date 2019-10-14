@@ -11,7 +11,7 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
       
-### mvn打包命令：
+###     mvn打包命令：
 
     mvn clean package -Ponline -DskipTests=true
     mvn install -DskipTests 或 
@@ -19,9 +19,10 @@
     java -jar --server.port=8088
     java -jar -Dserver.port=8088
     
-###      这个插件，可以将应用打包成一个可执行的jar包
+###     spring-boot 这个插件，可以将应用打包成一个可执行的jar包
 
     <build>
+        <finalName>projectName</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
