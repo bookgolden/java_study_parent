@@ -23,6 +23,7 @@
         <module>java-design-patterns</module>
         <module>java-thinking</module>
         <module>junit-mock</module>
+		<module>java-jdbc</module>
     </modules>
 
     <properties>
