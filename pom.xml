@@ -24,6 +24,7 @@
         <module>java-thinking</module>
         <module>junit-mock</module>
 		<module>java-jdbc</module>
+		<module>java-lucene</module>
     </modules>
 
     <properties>

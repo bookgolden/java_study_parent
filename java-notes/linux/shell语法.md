@@ -83,12 +83,30 @@
     -lt 小于（less than）			-le 小于等于（less equal）
     -eq 等于（equal）				-gt 大于（greater than）
     -ge 大于等于（greater equal）	-ne 不等于（Not equal）
+
+---    
+    if [ -n str1 ]　　　　　　 当串的长度大于0时为真(串非空) 
+    if [ -z str1 ]　　　　　　　 当串的长度为0时为真(空串) 
+    
+    eg:
+    
+    if [ -z "$STD_BACKUP_DIR" ]; then
+            STD_BACKUP_DIR=$PRI_BACKUP_DIR
+    fi
+    
+    if [ -n "$STD_HOST_IP" ]; then
+    ping $STD_HOST_IP -c1
+    fi
+---
+
 ######  （2）按照文件权限进行判断
-    -r 有读的权限（read）			-w 有写的权限（write）
+    -r 有读的权限（read）			
+    -w 有写的权限（write）
     -x 有执行的权限（execute）
 ######  （3）按照文件类型进行判断
     -f 文件存在并且是一个常规的文件（file）
-    -e 文件存在（existence）		-d 文件存在并是一个目录（directory）
+    -e 文件存在（existence）		
+    -d 文件存在并是一个目录（directory）
 
     [root@storm4 study_space]# [ 23 -ge 22 ]        23是否大于等于22
     [root@storm4 study_space]# echo $?
