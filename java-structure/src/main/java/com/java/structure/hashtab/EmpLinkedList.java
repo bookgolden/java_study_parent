@@ -1,4 +1,4 @@
-package com.java.structure.hash;
+package com.java.structure.hashtab;
 
 /**
  * 创建EmpLinkedList ,表示链表
